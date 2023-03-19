@@ -10,14 +10,17 @@ import NotFound from './pages/NotFound';
 class App extends Component {
   render() {
     return (
-      <Routes>
-        <Route path="/" element={<AppLayout />}>
-          <Route index element={<Home />} />
+      <>
+        <h1>Hello</h1>
+        <Routes>
+          <Route path="/" element={<AppLayout />}>
+            <Route data-testId="home" index element={<Home />} />
 
-          <Route path="about" element={<About />} />
-          <Route path="*" element={<NotFound />} />
-        </Route>
-      </Routes>
+            <Route data-tesId="about" path="about" element={<About />} />
+            <Route path="*" element={<NotFound />} />
+          </Route>
+        </Routes>
+      </>
     );
   }
 }
