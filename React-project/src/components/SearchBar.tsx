@@ -1,3 +1,4 @@
+/* eslint-disable react/no-unused-class-component-methods */
 /* eslint-disable react/destructuring-assignment */
 import React, { Component } from 'react';
 import './SearchBar.css';
@@ -14,9 +15,15 @@ class SearchBar extends Component<SearchBarProps, SearchBarState> {
   constructor(props: SearchBarProps) {
     super(props);
     this.state = {
-      searchText: 'Search Bar....',
+      searchText: localStorage.getItem('searchText') || 'Search Bar.....',
     };
   }
+
+  handleSearch = (event: React.ChangeEvent<HTMLInputElement>) => {
+    const searchText = event.target.value;
+    this.setState({ searchText });
+    localStorage.setItem('searchText', searchText);
+  };
 
   handleSearchInputChange = (event: React.ChangeEvent<HTMLInputElement>) => {
     this.setState({ searchText: event.target.value });
