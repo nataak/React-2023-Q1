@@ -1,5 +1,10 @@
-function Home() {
-  return <h1>Home page</h1>;
+/* eslint-disable react/prefer-stateless-function */
+import { Component } from 'react';
+
+class Home extends Component {
+  render() {
+    return <h1>Home page</h1>;
+  }
 }
 
 export default Home;
