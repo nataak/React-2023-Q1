@@ -1,0 +1,29 @@
+.search {
+  margin: 20px auto;
+  border-radius: 20px;
+  border: none;
+  padding: 20px;
+  min-width: 400px;
+  box-shadow: 2px 2px 3px 0px #7f4bb9, 2px 2px 2px 2px rgba(135, 168, 199, 0);
+  outline: none;
+  color: blueviolet;
+  font-size: 20px;
+}
+
+.btn {
+  padding: 20px;
+  width: 200px;
+  margin-left: 10px;
+  background-color: blueviolet;
+  color: #fff;
+  border: none;
+  border-radius: 20px;
+  outline: none;
+}
+
+
+button,
+button:active,
+button:focus {
+  outline: none;
+}
